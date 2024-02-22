@@ -98,11 +98,12 @@ GEM
     activejob (7.0.8)
       activesupport (= 7.0.8)
       globalid (>= 0.3.6)
-    activemerchant (1.123.0)
+    activemerchant (1.133.0)
       activesupport (>= 4.2)
       builder (>= 2.1.2, < 4.0.0)
       i18n (>= 0.6.9)
       nokogiri (~> 1.4)
+      rexml (~> 3.2.5)
     activemodel (7.0.8)
       activesupport (= 7.0.8)
     activerecord (7.0.8)
@@ -221,7 +222,7 @@ GEM
       ruby-rc4 (>= 0.1.5)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
-    crack (0.4.6)
+    crack (1.0.0)
       bigdecimal
       rexml
     crass (1.0.6)
@@ -379,7 +380,8 @@ GEM
       rspec (>= 2.0, < 4.0)
     jsonapi-serializer (2.2.0)
       activesupport (>= 4.2)
-    jwt (2.7.1)
+    jwt (2.8.0)
+      base64
     knapsack_pro (6.0.4)
       rake
     language_server-protocol (3.17.0.3)
@@ -579,7 +581,7 @@ GEM
     redcarpet (3.6.0)
     redis (5.1.0)
       redis-client (>= 0.17.0)
-    redis-client (0.19.1)
+    redis-client (0.20.0)
       connection_pool
     regexp_parser (2.9.0)
     reline (0.4.1)
@@ -681,7 +683,7 @@ GEM
     semantic_range (3.0.0)
     shoulda-matchers (6.1.0)
       activesupport (>= 5.2.0)
-    sidekiq (7.2.1)
+    sidekiq (7.2.2)
       concurrent-ruby (< 2)
       connection_pool (>= 2.3.0)
       rack (>= 2.2.4)
@@ -702,6 +704,8 @@ GEM
     spring (4.1.3)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
+    spring-commands-rubocop (0.4.0)
+      spring (>= 1.0)
     sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -778,7 +782,7 @@ GEM
       activesupport
       faraday (~> 2.0)
       faraday-follow_redirects
-    webmock (3.20.0)
+    webmock (3.21.2)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
@@ -923,6 +927,7 @@ DEPENDENCIES
   spreadsheet_architect
   spring
   spring-commands-rspec
+  spring-commands-rubocop
   state_machines-activerecord
   stimulus_reflex (= 3.5.0.rc3)
   stimulus_reflex_testing
